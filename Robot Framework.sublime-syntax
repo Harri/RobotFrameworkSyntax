@@ -39,7 +39,7 @@ contexts:
           pop: true
 
   strings:
-    - match: '(?i)^(\|\s*)?(\*{1,3} ?)(settings?|variables?|keywords?|test cases?)( ?\*{1,3})?(\s*\|)?'
+    - match: '(?i)^(\|\s*)?(\*{1,3} ?)(settings?|variables?|keywords?|test cases?|tasks?)( ?\*{1,3})?(\s*\|)?'
       scope: string.robot.headers
     - match: '(?i)^\s+(Given|When|and|but|Then)'
       scope: string.robot.bdd
