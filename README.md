@@ -6,7 +6,7 @@ What's included:
  * Build system for Robot Framework
  * Command to execute [`robot.tidy`](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-clean-up-tool-tidy) for current buffer
 
-What's not, and will be not, included:
+What's not, and will not be, included:
 
  * IDE-like features
 
