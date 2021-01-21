@@ -33,7 +33,7 @@ To get IDE-like features for RF
 
 ## How to install
 
-Open the command palette and run Package Control: Install Package, then select *RobotFrameworkSyntax*.
+Download this repository as zip or git clone, then in Sublime Text navigate to *Preferences* > *Browser Packages...*. Create new directory *RobotFrameworkSyntax* and copy all files from the zip/git repository to there.
 
 ## Obligatory example image
 
