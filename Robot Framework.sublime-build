@@ -1,0 +1,4 @@
+{
+    "cmd": ["python", "-m", "robot.run", "--loglevel", "TRACE", "$file"],
+    "selector": "source.robot"
+}

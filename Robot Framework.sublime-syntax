@@ -1,0 +1,67 @@
+%YAML 1.2
+---
+file_extensions:
+  - robot
+  - resource
+scope: source.robot
+
+contexts:
+  prototype:
+    - include: comments
+
+  main:
+    - include: strings
+    - include: numbers
+    - include: variables
+    - include: constants
+    - include: keywords
+    - include: storage
+
+  keywords:
+    - match: '^(\|\s+)?(?!^\.{3})(?![\|$&amp;])\S+'
+      scope: keyword.control.robot
+      push:
+        - meta_scope: keyword.control.robot
+        - match: '($|\||\s{2,})'
+          pop: true
+        - include: variables
+
+  numbers:
+    - match: '\$\{(\d+|\d+\.\d*|0[bB][01]+|0[oO][0-7]+|0[xX][0-9a-fA-F]+)\}'
+      scope: constant.numeric.robot
+
+  variables:
+    - match: '(\$|\@|\&)\{'
+      scope: variable.parameter.robot
+      push:
+        - meta_scope: variable.parameter.robot
+        - match: '\}'
+          pop: true
+
+  strings:
+    - match: '(?i)^(\|\s*)?(\*{1,3} ?)(settings?|variables?|keywords?|test cases?)( ?\*{1,3})?(\s*\|)?'
+      scope: string.robot.headers
+    - match: '(?i)^\s+(Given|When|and|but|Then)'
+      scope: string.robot.bdd
+
+  comments:
+    - match: '(^| {2,}|\t|\\| {1,})(?<!\\\\)#'
+      scope: punctuation.definition.comment.robot
+      push:
+        - meta_scope: comment.line.robot
+        - match: $\n?
+          pop: true
+    - match: '(?i)(^\|\s*)?\[?Documentation\]?\s+'
+      scope: punctuation.definition.comment.robot
+      push:
+        - meta_scope: comment.line.robot
+        - match: '^(?!\s*+\.\.\.)'
+          pop: true
+
+  storage:
+    - match: '(?i)\s+\[(Tags|Setup|Teardown|Template|Timeout|Arguments|Return)\]'
+      scope: storage.type
+
+  constants:
+    - match: '(?i)^(\|\s*)?(Library|Resource|Test Timeout|Test Template|Test Teardown|Test Setup|Default Tags|Force Tags|Metadata|Variables|Suite Setup|Suite Teardown)(?:(  )|( \| ))'
+      scope: constant.language
