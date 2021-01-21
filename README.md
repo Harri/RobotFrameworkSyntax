@@ -17,20 +17,20 @@ To get IDE-like features for RF
  3. execute `pip install robotframwork_ls`
  4. Add 
 
-    "robotframework": {
-      "command": ["python", "-m", "robotframework_ls"],
-      "enabled": true,
-      "languageId": "robotframework",
-      "scopes": [
-        "source.robot",
-        "source.resource"
-      ],
-      "syntaxes": [
-        "Packages/Robot Framework Syntax/RobotFrameworkSyntax.sublime-syntax"
-      ]
-    }
-
-    to LSP settings' clients.
+        "robotframework": {
+          "command": ["python", "-m", "robotframework_ls"],
+          "enabled": true,
+          "languageId": "robotframework",
+          "scopes": [
+            "source.robot",
+            "source.resource"
+          ],
+          "syntaxes": [
+            "Packages/Robot Framework Syntax/RobotFrameworkSyntax.sublime-syntax"
+          ]
+        }
+  
+  to LSP settings' clients.
 
 ## How to install
 
