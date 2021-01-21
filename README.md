@@ -4,7 +4,6 @@ What's included:
 
  * Syntax highlighting for Robot Framework
  * Build system for Robot Framework
- * Command to execute [`robot.tidy`](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-clean-up-tool-tidy) for current buffer
 
 What's not, and will not be, included:
 
@@ -26,7 +25,7 @@ To get IDE-like features for RF
             "source.resource"
           ],
           "syntaxes": [
-            "Packages/Robot Framework Syntax/RobotFrameworkSyntax.sublime-syntax"
+            "Packages/RobotFrameworkSyntax/Robot Framework.sublime-syntax"
           ]
         }
   
@@ -34,7 +33,7 @@ To get IDE-like features for RF
 
 ## How to install
 
-Open the command palette and run Package Control: Install Package, then select Robot Framework Syntax.
+Open the command palette and run Package Control: Install Package, then select *RobotFrameworkSyntax*.
 
 ## Obligatory example image
 

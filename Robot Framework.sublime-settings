@@ -8,12 +8,4 @@
     // Set to "none" to turn off drawing white space, "selection" to draw only the
     // white space within the selection, and "all" to draw all white space
     "draw_white_space": "all",
-
-    // Characters that are considered to separate words.
-    // Same as default in Sublime Text 3.2.2 build 3211
-    // except * is removed.
-    "word_separators": "./\\()\"'-:,.;<>~!@#$%^&|+=[]{}`~?",
-
-    // Path to python. If python is in PATH, just the name of the binary is enough.
-    "python_path": "python",
 }
