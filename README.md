@@ -13,7 +13,7 @@ To get IDE-like features for RF
 
  1. Install this plugin
  2. Install https://packagecontrol.io/packages/LSP for Sublime Text
- 3. execute `pip install robotframwork_ls`
+ 3. execute `pip install robotframework-lsp`
  4. Add 
 
         "robotframework": {
